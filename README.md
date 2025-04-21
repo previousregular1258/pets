@@ -1,15 +1,17 @@
-### 1. Setup the Library
+### 1. Install dependencies (at the root)
 
 ```bash
-cd pets-lib
 pnpm i
-pnpm build
 ```
 
-### 2. Setup the app
+### 2. Build the library
 
 ```bash
-cd pets-app
-pnpm i
-pnpm start:dev
+pnpm --filter pets-lib build
+```
+
+### 3. Run the app
+
+```bash
+pnpm --filter pets-app start:dev
 ```
